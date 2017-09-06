@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected String doInBackground(Void... params) {
                 Web3j web3 = Web3jFactory.build(new HttpService("https://rinkeby.infura.io/uKNKPMg61M00bdiCyHgY"));  // defaults to http://localhost:8545/
+
                 try {
                     return web3.web3ClientVersion().sendAsync().get().getWeb3ClientVersion();
                 } catch (InterruptedException | ExecutionException e) {
