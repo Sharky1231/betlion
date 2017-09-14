@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(Web3j w) {
                 web3j = w;
+                // todo background
                 example = ExampleContract.load("0x8b490ccdfd8191ac816d6d11f10172e35329aed1", web3j, credentials, ManagedTransaction.GAS_PRICE, Contract.GAS_LIMIT);
                 DoInBackground(homeScore);
                 DoInBackground(awayScore);
